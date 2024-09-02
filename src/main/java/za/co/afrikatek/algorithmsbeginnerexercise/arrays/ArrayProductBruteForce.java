@@ -2,6 +2,16 @@ package za.co.afrikatek.algorithmsbeginnerexercise.arrays;
 
 import java.util.Arrays;
 
+/**
+ * Solution 1: Brute force
+ *
+ * The brute force approach to solving this problem involves using two nested loops. Initially, the outer loop traverses each element in the array. For each element, the inner loop calculates the product of all subsequent elements.
+ *
+ * In this approach, we maintain a variable left , which represents the cumulative product of all elements to the left of the current element being considered. This left variable is crucial because it also helps us compute the product of all elements to the right of the current index.
+ *
+ * By multiplying the product of subsequent elements with the cumulative product of elements to the left, we ensure that every element’s product is accurately calculated and updated in the result array. This iterative process covers all elements in the array, ensuring that the product of every element in the original array, excluding the current element itself, is correctly computed.
+ */
+
 public class ArrayProductBruteForce {
     public static int[] findProduct(int[] arr) {
         int[] product = new int[arr.length];
